@@ -32,7 +32,7 @@ public class App {
             try (StringSerializer keySerializer = new StringSerializer()) {
                 byte [] keyBytes = keySerializer.serialize(null, args[KEY_INDEX]);
                 int partition = Utils.toPositive(Utils.murmur2(keyBytes)) % partitions;
-                System.out.println(args[KEY_INDEX] + ": " + partition);
+                System.out.println(args[KEY_INDEX] + " " + partition);
             }
 
         }
